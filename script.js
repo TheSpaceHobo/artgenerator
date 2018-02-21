@@ -50,15 +50,22 @@ var bodytype = [
   'average'
 ];
 var genders = [
-  'he',
-  'she'
+  'He',
+  'She'
 ]
 function generated(){
+  color1 = colors[Math.floor(Math.random()*colors.length)];
+  color2 = colors[Math.floor(Math.random()*colors.length)];
+  gender = genders[Math.floor(Math.random()*genders.length)];
+  currentclothes = clothes[Math.floor(Math.random()*clothes.length)];
+  currentbodytype = bodytype[Math.floor(Math.random()*bodytype.length)];
+  weapon = weapons[Math.floor(Math.random()*weapons.length)];
+  currenthaircolor = haircolors[Math.floor(Math.random()*haircolors.length)]
   return(
-    'Your character has ' + haircolors[Math.floor(Math.random()*haircolors.length)] + ' hair, is wearing '
-     + clothes[Math.floor(Math.random()*clothes.length)] + ' that are/is ' + colors[Math.floor(Math.random()*colors.length)] + ' and ' + colors[Math.floor(Math.random()*colors.length)] + ', has a(n) '
-     + bodytype[Math.floor(Math.random()*bodytype.length)] + ' body type ' + genders[Math.floor(Math.random()*genders.length)] + ' weilds (a) '
-     + weapons[Math.floor(Math.random()*weapons.length)] + ' that are/is ' + colors[Math.floor(Math.random()*colors.length)] + ' and ' + colors[Math.floor(Math.random()*colors.length)] + '.'
+    'Your character has ' + currenthaircolor + ' hair, is wearing '
+     + currentclothes + ' that are/is ' + color1 + ' and ' + color2 + ', has a(n) '
+     + currentbodytype + ' body type. ' + gender + ' weilds (a) '
+     + weapon + ' that are/is ' + color2 + ' and ' + color1 + '.'
 
   )
 }
